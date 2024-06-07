@@ -5,7 +5,7 @@ fun mergeSort(array: IntArray) {
     mergeSort(array, helper, 0, array.size - 1)
 
 }
-fun mergeSort(array: IntArray, helper: IntArray, low: Int, high: Int) {
+private fun mergeSort(array: IntArray, helper: IntArray, low: Int, high: Int) {
     if (low < high) {
         val middle = (low + high) / 2
         mergeSort(array, helper, low, middle) // Sort left half
@@ -14,7 +14,7 @@ fun mergeSort(array: IntArray, helper: IntArray, low: Int, high: Int) {
     }
 }
 
-fun merge(array: IntArray, helper: IntArray, low: Int, middle: Int, high: Int) {
+private fun merge(array: IntArray, helper: IntArray, low: Int, middle: Int, high: Int) {
     // Copy both halves into a helper array
     for (i in low..high) {
         helper[i] = array[i]
